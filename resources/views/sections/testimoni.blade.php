@@ -1,5 +1,17 @@
-    <section id="testimoni" class="testimonial-section testimonial-style1 section-padding">
+    <section id="testimoni" class="testimonial-section testimonial-style1 section-padding ">
         <div class="container">
+             <div class="row justify-content-center">
+                <div class="col-xxl-6 col-xl-7 col-md-8 col-sm-11">
+                    <div class="section-title mb-60 text-center">
+                        <h5 class="p1-clr wow fadeInLeft" data-wow-delay="0.4s">
+                            Testimoni
+                        </h5>
+                        <h2 class="wow fadeInDown" data-wow-delay=".3s">
+                             Suara Pelanggan, Bukti Kualitas Kami
+                        </h2>
+                    </div>
+                </div>
+            </div>
             <div class="row g-6 align-items-center">
                 <div class="col-lg-4 col-md-4">
                     <div class="testimonial-thumbv1 w-100 wow fadeInDown" data-wow-delay=".4s">

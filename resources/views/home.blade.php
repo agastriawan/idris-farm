@@ -10,6 +10,6 @@
     @include('sections.about')
     @include('sections.service')
     @include('sections.artikel')
-    @include('sections.kontak')
     @include('sections.testimoni')
+    @include('sections.kontak')
 @endsection

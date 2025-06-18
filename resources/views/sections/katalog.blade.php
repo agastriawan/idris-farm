@@ -1,5 +1,5 @@
     <!-- Service section -->
-    <section id="katalog" class="service-feature-section white-bg space-bottom mt-3">
+    <section id="katalog" class="service-feature-section white-bg space-top mt-3">
         <div class="filter-mixtup">
             <div class="container">
                 <div class="row g-4 justify-content-between align-items-end mb-60">
@@ -9,7 +9,7 @@
                                 Katalog
                             </h5>
                             <h2 class="wow fadeInDown" data-wow-delay=".3s">
-                                Nourishing the world from seed to table
+                                Menjelajahi Keberagaman Ternak Unggulan Kami
                             </h2>
                         </div>
                     </div>
@@ -20,86 +20,55 @@
                                     All
                                 </button>
                                 <button type="button" data-filter=".category-a">
-                                    Fresh
+                                    Sapi
                                 </button>
                                 <button type="button" data-filter=".category-b">
-                                    Organic
+                                    Kambing
                                 </button>
                                 <button type="button" data-filter=".category-c">
-                                    Vegetables
+                                    Domba
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="all-catagorys">
-                    <div class="mix category-a" data-order="1">
-                        <div class="feature-itemsv1">
-                            <img src="assets/img/gallery/feature1.jpg" alt="img" class="f-thumb">
-                            <div class="content">
-                                <a href="product-details.html" class="title">Tomato</a>
-                                <p>Agriculture farming are the essential</p>
-                                <h5>$120</h5>
-                                <a href="product-details.html" class="add-tocart">Add To Chart</a>
+                    @foreach ($animals as $animal)
+                        @php
+                            $categoryClass = '';
+                            switch (strtolower($animal->type)) {
+                                case 'sapi':
+                                    $categoryClass = 'category-a';
+                                    break;
+                                case 'kambing':
+                                    $categoryClass = 'category-b';
+                                    break;
+                                case 'domba':
+                                    $categoryClass = 'category-c';
+                                    break;
+                            }
+                        @endphp
+
+                        <div class="mix {{ $categoryClass }}" data-order="{{ $loop->iteration }}">
+                            <div class="feature-itemsv1">
+                                <img src="{{ asset('image_animal/' . $animal->image) }}" alt="{{ $animal->name }}"
+                                    class="f-thumb">
+                                <div class="content">
+                                    <a href="{{ url('product-details/' . $animal->id) }}"
+                                        class="title">{{ $animal->name }}</a>
+                                    <p>{{ Str::limit($animal->description, 60) }}</p>
+                                    <h5>Rp{{ number_format($animal->price, 0, ',', '.') }}</h5>
+                                    <a href="{{ url('product-details/' . $animal->id) }}" class="add-tocart">Lihat
+                                        Detail</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="mix category-b" data-order="2">
-                        <div class="feature-itemsv1">
-                            <img src="assets/img/gallery/feature2.jpg" alt="img" class="f-thumb">
-                            <div class="content">
-                                <a href="product-details.html" class="title">Meat</a>
-                                <p> Agriculture farming are the essential</p>
-                                <h5>$80</h5>
-                                <a href="product-details.html" class="add-tocart">Add To Chart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mix category-c" data-order="3">
-                        <div class="feature-itemsv1">
-                            <img src="assets/img/gallery/feature3.jpg" alt="img" class="f-thumb">
-                            <div class="content">
-                                <a href="product-details.html" class="title">Blossomed</a>
-                                <p>Agriculture farming are the essential</p>
-                                <h5>$45</h5>
-                                <a href="product-details.html" class="add-tocart">Add To Chart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mix category-a" data-order="4">
-                        <div class="feature-itemsv1">
-                            <img src="assets/img/gallery/feature4.jpg" alt="img" class="f-thumb">
-                            <div class="content">
-                                <a href="product-details.html" class="title">Egg</a>
-                                <p>Agriculture farming are the essential</p>
-                                <h5>$44</h5>
-                                <a href="product-details.html" class="add-tocart">Add To Chart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mix category-a category-c" data-order="5">
-                        <div class="feature-itemsv1">
-                            <img src="assets/img/gallery/feature5.jpg" alt="img" class="f-thumb">
-                            <div class="content">
-                                <a href="product-details.html" class="title">Corning</a>
-                                <p>Agriculture farming are the essential</p>
-                                <h5>$80</h5>
-                                <a href="product-details.html" class="add-tocart">Add To Chart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mix category-b" data-order="6">
-                        <div class="feature-itemsv1">
-                            <img src="assets/img/gallery/feature6.jpg" alt="img" class="f-thumb">
-                            <div class="content">
-                                <a href="product-details.html" class="title">Kales</a>
-                                <p>Agriculture farming are the essential</p>
-                                <h5>$45</h5>
-                                <a href="product-details.html" class="add-tocart">Add To Chart</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                    
                 </div>
-            </div>
-        </div>
+                <div class="d-flex justify-content-end mt-4">
+    <a href="#katalog" class="cmn-btn round100 wow fadeInUp" data-wow-delay="0.9s">
+        Selengkapnya <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</div>
     </section>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artikel;
-use App\Models\User;
+use App\Models\Animal;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 use App\Models\Kontak;
@@ -17,10 +17,12 @@ class PublikController extends Controller
     {
         $artikel = Artikel::with('user:id,nama')->limit(3)->get();
         $galleries = Gallery::latest()->take(5)->get();
+        $animals = Animal::latest()->take(6)->get(); 
 
         $data = [
             "artikels" => $artikel,
             "galleries" => $galleries,
+            "animals" => $animals,
         ];
 
         return view('home', $data);

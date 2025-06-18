@@ -1,5 +1,5 @@
     <!-- Service section -->
-    <section id="layanan" class="service-section white-bg space-top">
+    <section id="layanan" class="service-section white-bg">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xxl-6 col-xl-7 col-md-8 col-sm-11">

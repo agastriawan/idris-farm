@@ -1,5 +1,5 @@
     <!--<< Footer Section Start >>-->
-    <footer class="footer-section overflow-hidden position-relative footer-style1 mt-3">
+    <footer class="footer-section overflow-hidden position-relative footer-style1">
         <div class="pt-5">
             <div class="container">
                 <div class="row g-md-4 g-4 justify-content-between">
