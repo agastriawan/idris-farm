@@ -17,7 +17,7 @@ class PublikController extends Controller
     {
         $artikel = Artikel::with('user:id,nama')->limit(3)->get();
         $galleries = Gallery::latest()->take(5)->get();
-        $animals = Animal::latest()->take(6)->get(); 
+        $animals = Animal::latest()->take(6)->get();
 
         $data = [
             "artikels" => $artikel,
@@ -47,7 +47,6 @@ class PublikController extends Controller
             return redirect()->route('notFound');
         }
 
-        // Ambil 3 artikel terbaru selain artikel ini
         $recentPosts = Artikel::where('id', '!=', $artikel->id)
             ->latest()
             ->take(3)
@@ -59,6 +58,34 @@ class PublikController extends Controller
         ];
 
         return view('artikel-detail', $data);
+    }
+
+    public function katalog()
+    {
+        $animal = Animal::paginate(8);
+
+        $data = [
+            "animals" => $animal
+        ];
+
+        return view('katalog', $data);
+    }
+
+    public function gallery()
+    {
+        $gallery = Gallery::paginate(8);
+
+        $data = [
+            "galleries" => $gallery
+        ];
+
+        return view('gallery', $data);
+    }
+
+    public function katalog_detail($slug)
+    {
+        $animal = Animal::findOrFail($slug);
+        return view('katalog-detail', compact('animal'));
     }
 
     public function tentang_kami()

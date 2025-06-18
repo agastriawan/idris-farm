@@ -10,7 +10,7 @@
                     <div class="about-contentv1">
                         <div class="section-title mb-40">
                             <h5 class="p1-clr wow fadeInLeft" data-wow-delay="0.4s">
-                                Kenapa Memilih kami
+                                TENTANG
                             </h5>
                             <h2 class="wow fadeInDown" data-wow-delay=".3s">
                                 Kami Hadirkan Kebaikan Alami untuk Anda
@@ -42,9 +42,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="about.html" class="cmn-btn round100 cmn-primary2">
-                                Detail
-                            </a>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@
             <div class="row justify-content-center">
                 <div class="col-xxl-6 col-xl-7 col-md-8 col-sm-11">
                     <div class="section-title mb-60 text-center">
-                        <h5 class="p1-clr wow fadeInLeft" data-wow-delay="0.4s">OUR BLOGS</h5>
+                        <h5 class="p1-clr wow fadeInLeft" data-wow-delay="0.4s">ARTIKEL</h5>
                         <h2 class="wow fadeInDown" data-wow-delay=".3s">Cultivating a sustainable future for all</h2>
                     </div>
                 </div>

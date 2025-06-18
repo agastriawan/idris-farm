@@ -15,7 +15,10 @@ use App\Http\Middleware\RoleMiddleware;
 
 Route::get('/', [PublikController::class, 'index'])->name('index');
 Route::get('artikels', [PublikController::class, 'artikel'])->name('artikel');
+Route::get('katalogs', [PublikController::class, 'katalog'])->name('katalog');
+Route::get('galeri', [PublikController::class, 'gallery'])->name('gallery');
 Route::get('artikel-detail/{slug}', [PublikController::class, 'artikel_detail'])->name('artikel_detail');
+Route::get('katalog-detail/{slug}', [PublikController::class, 'katalog_detail'])->name('katalog_detail');
 Route::get('dashboard', [DashboardController::class, 'index'])->name('umkm')->middleware('auth');
 Route::post('auth/_logout', [AuthController::class, '_logout']);
 

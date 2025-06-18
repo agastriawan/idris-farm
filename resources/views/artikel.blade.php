@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Artikel - UMKash')
+@section('title', 'Artikel - Idris Farm')
 
 @section('content')
     <!-- tp breadcrumb area start -->

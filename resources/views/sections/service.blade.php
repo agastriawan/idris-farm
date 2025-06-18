@@ -5,7 +5,7 @@
                 <div class="col-xxl-6 col-xl-7 col-md-8 col-sm-11">
                     <div class="section-title mb-60 text-center">
                         <h5 class="p1-clr wow fadeInLeft" data-wow-delay="0.4s">
-                            Pelayanan Kami
+                            LAYANAN
                         </h5>
                         <h2 class="wow fadeInDown" data-wow-delay=".3s">
                             Merawat Ternak, Menyajikan Kebaikan
@@ -20,8 +20,7 @@
                         <img src="{{ asset('assets/img/icon/count1.svg') }}" alt="svg" class="icons">
                         <div class="content">
                             <a href="service-details.html" class="title">Produk Susu</a>
-                            <p>Agriculture and farming are essential industries</p>
-                            <a href="service-details.html" class="arrows">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                            <p>Kami menyediakan susu segar berkualitas tinggi langsung dari peternakan, diproses secara higienis untuk memenuhi kebutuhan gizi harian Anda.</p>
                         </div>
                     </div>
                 </div>
@@ -30,8 +29,7 @@
                         <img src="{{ asset('assets/img/icon/wheat-sesh.svg') }}" alt="svg" class="icons">
                         <div class="content">
                             <a href="service-details.html" class="title">Penyuplai Daging</a>
-                            <p>Agriculture and farming are essential industries</p>
-                            <a href="service-details.html" class="arrows">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                            <p>Daging segar dari hewan pilihan, dipotong dan dikemas sesuai standar kebersihan untuk kebutuhan konsumsi rumah tangga maupun bisnis.</p>
                         </div>
                     </div>
                 </div>
@@ -40,8 +38,7 @@
                         <img src="{{ asset('assets/img/icon/smart-flower.svg') }}" alt="svg" class="icons">
                         <div class="content">
                             <a href="service-details.html" class="title">Hewan Kurban</a>
-                            <p>Agriculture and farming are essential industries</p>
-                            <a href="service-details.html" class="arrows">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                            <p>Tersedia berbagai pilihan hewan kurban sehat dan sesuai syariat, lengkap dengan layanan perawatan hingga pengantaran ke lokasi Anda.</p>
                         </div>
                     </div>
                 </div>

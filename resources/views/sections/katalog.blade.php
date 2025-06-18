@@ -6,7 +6,7 @@
                     <div class="col-xxl-5 col-xl-7">
                         <div class="section-title">
                             <h5 class="p1-clr wow fadeInLeft" data-wow-delay="0.4s">
-                                Katalog
+                                KATALOG
                             </h5>
                             <h2 class="wow fadeInDown" data-wow-delay=".3s">
                                 Menjelajahi Keberagaman Ternak Unggulan Kami
@@ -54,21 +54,23 @@
                                 <img src="{{ asset('image_animal/' . $animal->image) }}" alt="{{ $animal->name }}"
                                     class="f-thumb">
                                 <div class="content">
-                                    <a href="{{ url('product-details/' . $animal->id) }}"
+                                    <a href="{{ url('katalog-detail/' . $animal->id) }}"
                                         class="title">{{ $animal->name }}</a>
                                     <p>{{ Str::limit($animal->description, 60) }}</p>
                                     <h5>Rp{{ number_format($animal->price, 0, ',', '.') }}</h5>
-                                    <a href="{{ url('product-details/' . $animal->id) }}" class="add-tocart">Lihat
+                                    <a href="{{ url('katalog-detail/' . $animal->id) }}" class="add-tocart">Lihat
                                         Detail</a>
                                 </div>
                             </div>
                         </div>
                     @endforeach
-                    
+
                 </div>
                 <div class="d-flex justify-content-end mt-4">
-    <a href="#katalog" class="cmn-btn round100 wow fadeInUp" data-wow-delay="0.9s">
-        Selengkapnya <i class="fa-solid fa-arrow-right"></i>
-    </a>
-</div>
+                    <a href="{{ url('katalogs') }}" class="cmn-btn round100 wow fadeInUp" data-wow-delay="0.9s">
+                        Selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
