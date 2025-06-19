@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Beranda - UMKash')
+@section('title', 'Beranda - Idris Farm')
 
 @section('content')
     @include('sections.hero')

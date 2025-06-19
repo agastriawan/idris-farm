@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Login - UMKash')
+@section('title', 'Login - Idris Farm')
 
 @section('content')
 
