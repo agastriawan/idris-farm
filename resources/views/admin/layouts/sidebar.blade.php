@@ -5,18 +5,18 @@
             <div class="logo-box">
                 <a href="{{ url('/') }}" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ asset('assets/img/logo/Logo_IdrisFarm.png') }}" alt="" height="48">
+                        <img src="{{ asset('assets/img/logo/logo_admin.png') }}" alt="" height="30">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('assets/img/logo/Logo_IdrisFarm.png') }}" alt="" height="50">
+                        <img src="{{ asset('assets/img/logo/logo_admin.png') }}" alt="" height="30">
                     </span>
                 </a>
                 <a href="{{ url('/') }}" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{ asset('assets/img/logo/Logo_IdrisFarm.png') }}" alt="" height="48">
+                        <img src="{{ asset('assets/img/logo/logo_admin.png') }}" alt="" height="30">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('assets/img/logo/Logo_IdrisFarm.png') }}" alt="" height="50">
+                        <img src="{{ asset('assets/img/logo/logo_admin.png') }}" alt="" height="30">
                     </span>
                 </a>
             </div>

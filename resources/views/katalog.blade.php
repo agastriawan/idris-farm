@@ -34,7 +34,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="all-catagorys">
+                        <div class="row all-catagorys">
                             @foreach ($animals as $animal)
                                 @php
                                     $category = '';
@@ -51,16 +51,23 @@
                                     }
                                 @endphp
 
-                                <div class="mix {{ $category }}" data-order="{{ $loop->iteration }}">
-                                    <div class="feature-itemsv1">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 mix {{ $category }}"
+                                    data-order="{{ $loop->iteration }}">
+                                    <div class="feature-itemsv1 h-100 border rounded shadow-sm">
                                         <img src="{{ asset('image_animal/' . $animal->image) }}" alt="{{ $animal->name }}"
-                                            class="f-thumb">
-                                        <div class="content">
-                                            <a href="{{ url('katalog-detail/' . $animal->id) }}"
-                                                class="title">{{ $animal->name }}</a>
-                                            <p>{{ Str::limit($animal->description, 60) }}</p>
-                                            <h5>Rp{{ number_format($animal->price, 0, ',', '.') }}</h5>
-                                            <a href="{{ url('katalog-detail/' . $animal->id) }}" class="add-tocart">Lihat Detail</a>
+                                            class="f-thumb w-100" style="height: 200px; object-fit: cover;">
+                                        <div class="content p-3 d-flex flex-column justify-content-between h-100">
+                                            <div>
+                                                <a href="{{ url('katalog-detail/' . $animal->id) }}"
+                                                    class="title fw-bold d-block mb-2">{{ $animal->name }}</a>
+                                                <p class="mb-2">{{ Str::limit($animal->description, 60) }}</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-success mb-2">
+                                                    Rp{{ number_format($animal->price, 0, ',', '.') }}</h5>
+                                                <a href="{{ url('katalog-detail/' . $animal->id) }}"
+                                                    class="btn btn-outline-success btn-sm w-100">Lihat Detail</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -81,14 +88,12 @@
                                 @if ($animals->onFirstPage())
                                     <li>
                                         <a href="#" class="disabled" aria-disabled="true">
-                                            <<
-                                        </a>
+                                            << </a>
                                     </li>
                                 @else
                                     <li>
                                         <a href="{{ $animals->previousPageUrl() }}">
-                                            <<
-                                        </a>
+                                            << </a>
                                     </li>
                                 @endif
 
@@ -113,7 +118,7 @@
                                 @else
                                     <li>
                                         <a href="#" class="disabled" aria-disabled="true">
-                                           >>
+                                            >>
                                         </a>
                                     </li>
                                 @endif

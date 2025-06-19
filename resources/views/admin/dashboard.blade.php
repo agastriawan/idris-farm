@@ -6,14 +6,10 @@
 @section('content')
     <div class="container-fluid">
 
-        {{-- @php
-            $isAdmin = auth()->user()->role_id == 2;
-        @endphp --}}
-
         <div class="py-3 d-flex align-items-sm-center flex-sm-row flex-column">
             <div class="flex-grow-1">
                 <h4 class="fs-18 fw-semibold m-0">
-                    Ringkasan Transaksi Bulan
+                    Keterangan Konten
                 </h4>
             </div>
         </div>
@@ -26,10 +22,10 @@
                                 <div class="bg-secondary-subtle rounded-2 p-1 me-2 border border-dashed border-secondary">
                                     <i data-feather="book" style="color: #824563"></i>
                                 </div>
-                                <p class="mb-0 text-dark fs-15">Total Pemasukan</p>
+                                <p class="mb-0 text-dark fs-15">Total Artikel</p>
                             </div>
-                            <h3 class="mb-0 fs-24 text-black me-2">Rp.
-                                {{ number_format($totalPemasukanBulanIni, 0, ',', '.') }}</h3>
+                            <h3 class="mb-0 fs-24 text-black me-2">
+                                {{ $totalArtikel }}</h3>
                         </div>
                     </div>
                 </div>
@@ -41,10 +37,10 @@
                                 <div class="bg-warning-subtle rounded-2 p-1 me-2 border border-dashed border-warning">
                                     <i data-feather="shopping-cart" style="color: #f59440"></i>
                                 </div>
-                                <p class="mb-0 text-dark fs-15">Total Pengeluaran</p>
+                                <p class="mb-0 text-dark fs-15">Total Hewan</p>
                             </div>
-                            <h3 class="mb-0 fs-24 text-black me-2">Rp.
-                                {{ number_format($totalPengeluaranBulanIni, 0, ',', '.') }}</h3>
+                            <h3 class="mb-0 fs-24 text-black me-2">
+                                {{ $totalAnimal }}</h3>
                         </div>
                     </div>
                 </div>
@@ -56,9 +52,9 @@
                                 <div class="bg-info-subtle rounded-2 p-1 me-2 border border-dashed border-info">
                                     <i data-feather="slack" style="color: #288071"></i>
                                 </div>
-                                <p class="mb-0 text-dark fs-15">Sisa Saldo</p>
+                                <p class="mb-0 text-dark fs-15">Total Galeri</p>
                             </div>
-                            <h3 class="mb-0 fs-24 text-black me-2">Rp. {{ number_format($sisaSaldoBulanIni, 0, ',', '.') }}
+                            <h3 class="mb-0 fs-24 text-black me-2"> {{ $totalGallery }}
                             </h3>
                         </div>
                     </div>

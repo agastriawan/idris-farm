@@ -53,7 +53,7 @@
                                 <span class="d-block">Ketersediaan: Tersedia</span>
 
                                 @php
-                                    $whatsappNumber = '6288295747113'; // no WhatsApp kamu
+                                    $whatsappNumber = '6283821852905'; // no WhatsApp kamu
                                     $message =
                                         "Halo Admin, saya ingin menanyakan ketersediaan produk berikut:\n\n" .
                                         "Nama Hewan: {$animal->name}\n" .

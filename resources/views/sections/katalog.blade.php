@@ -32,42 +32,49 @@
                         </div>
                     </div>
                 </div>
-                <div class="all-catagorys">
+                <div class="row all-catagorys">
                     @foreach ($animals as $animal)
                         @php
-                            $categoryClass = '';
+                            $category = '';
                             switch (strtolower($animal->type)) {
                                 case 'sapi':
-                                    $categoryClass = 'category-a';
+                                    $category = 'category-a';
                                     break;
                                 case 'kambing':
-                                    $categoryClass = 'category-b';
+                                    $category = 'category-b';
                                     break;
                                 case 'domba':
-                                    $categoryClass = 'category-c';
+                                    $category = 'category-c';
                                     break;
                             }
                         @endphp
 
-                        <div class="mix {{ $categoryClass }}" data-order="{{ $loop->iteration }}">
-                            <div class="feature-itemsv1">
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 mix {{ $category }}"
+                            data-order="{{ $loop->iteration }}">
+                            <div class="feature-itemsv1 h-100 border rounded shadow-sm">
                                 <img src="{{ asset('image_animal/' . $animal->image) }}" alt="{{ $animal->name }}"
-                                    class="f-thumb">
-                                <div class="content">
-                                    <a href="{{ url('katalog-detail/' . $animal->id) }}"
-                                        class="title">{{ $animal->name }}</a>
-                                    <p>{{ Str::limit($animal->description, 60) }}</p>
-                                    <h5>Rp{{ number_format($animal->price, 0, ',', '.') }}</h5>
-                                    <a href="{{ url('katalog-detail/' . $animal->id) }}" class="add-tocart">Lihat
-                                        Detail</a>
+                                    class="f-thumb w-100" style="height: 200px; object-fit: cover;">
+                                <div class="content p-3 d-flex flex-column justify-content-between h-100">
+                                    <div>
+                                        <a href="{{ url('katalog-detail/' . $animal->id) }}"
+                                            class="title fw-bold d-block mb-2">{{ $animal->name }}</a>
+                                        <p class="mb-2">{{ Str::limit($animal->description, 60) }}</p>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-success mb-2">
+                                            Rp{{ number_format($animal->price, 0, ',', '.') }}</h5>
+                                        <a href="{{ url('katalog-detail/' . $animal->id) }}"
+                                            class="btn btn-outline-success btn-sm w-100">Lihat Detail</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
-
                 </div>
+
                 <div class="d-flex justify-content-end mt-4">
-                    <a href="{{ url('katalogs') }}" class="cmn-btn round100 wow fadeInUp" data-wow-delay="0.9s">
+                    <a href="{{ url('katalogs') }}" class="btn btn-primary"
+                        style="background: linear-gradient(45deg, #204f3e, #b38600); color: #fff; padding: 10px 25px; border-radius: 8px; font-weight: 600;">
                         Selengkapnya <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>

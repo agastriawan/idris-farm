@@ -14,7 +14,8 @@
                         Kami menyediakan produk susu kambing segar, daging sapi & kambing terbaik, serta hewan kurban
                         sehat dan sesuai syariat.
                     </p>
-                    <a href="#katalog" class="cmn-btn round100 wow fadeInUp" data-wow-delay="0.9s">
+                   <a href="#katalog" class="btn btn-primary"
+                        style="background: linear-gradient(45deg, #204f3e, #b38600); color: #fff; padding: 10px 25px; border-radius: 8px; font-weight: 600;">
                         Selengkapnya <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>

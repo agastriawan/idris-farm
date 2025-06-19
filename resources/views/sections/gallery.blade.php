@@ -67,7 +67,8 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-end mt-4">
-                    <a href="{{ url('galeri') }}" class="cmn-btn round100 wow fadeInUp" data-wow-delay="0.9s">
+                    <a href="{{ url('galeri') }}" class="btn btn-primary"
+                        style="background: linear-gradient(45deg, #204f3e, #b38600); color: #fff; padding: 10px 25px; border-radius: 8px; font-weight: 600;">
                         Selengkapnya <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
