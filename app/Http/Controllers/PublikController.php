@@ -16,7 +16,7 @@ class PublikController extends Controller
     public function index()
     {
         $artikel = Artikel::with('user:id,nama')->limit(3)->get();
-        $galleries = Gallery::latest()->take(5)->get();
+        $galleries = Gallery::first()->take(5)->get();
         $animals = Animal::latest()->take(6)->get();
 
         $data = [

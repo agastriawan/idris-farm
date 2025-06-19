@@ -49,26 +49,25 @@
                             }
                         @endphp
 
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 mix {{ $category }}"
-                            data-order="{{ $loop->iteration }}">
-                            <div class="feature-itemsv1 h-100 border rounded shadow-sm">
+                       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 mix {{ $category }}" data-order="{{ $loop->iteration }}">
+                            <div class="card h-100 shadow-sm border-0">
                                 <img src="{{ asset('image_animal/' . $animal->image) }}" alt="{{ $animal->name }}"
-                                    class="f-thumb w-100" style="height: 200px; object-fit: cover;">
-                                <div class="content p-3 d-flex flex-column justify-content-between h-100">
+                                    class="card-img-top" style="height: 200px; object-fit: cover; border-top-left-radius: .5rem; border-top-right-radius: .5rem;">
+                                <div class="card-body d-flex flex-column justify-content-between">
                                     <div>
-                                        <a href="{{ url('katalog-detail/' . $animal->id) }}"
-                                            class="title fw-bold d-block mb-2">{{ $animal->name }}</a>
-                                        <p class="mb-2">{{ Str::limit($animal->description, 60) }}</p>
+                                        <h5 class="card-title fw-bold text-success">{{ $animal->name }}</h5>
+                                        <p class="card-text text-muted">{{ Str::limit($animal->description, 60) }}</p>
                                     </div>
-                                    <div>
-                                        <h5 class="text-success mb-2">
-                                            Rp{{ number_format($animal->price, 0, ',', '.') }}</h5>
-                                        <a href="{{ url('katalog-detail/' . $animal->id) }}"
-                                            class="btn btn-outline-success btn-sm w-100">Lihat Detail</a>
+                                    <div class="mt-3">
+                                        <h6 class="text-success mb-2">Rp{{ number_format($animal->price, 0, ',', '.') }}</h6>
+                                        <a href="{{ url('katalog-detail/' . $animal->id) }}" class="btn btn-outline-success btn-sm w-100">
+                                            Lihat Detail
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     @endforeach
                 </div>
 

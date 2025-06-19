@@ -20,7 +20,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="gallery-static-item">
                             <img src="{{ asset('image_gallery/' . $gallery->image) }}" alt="{{ $gallery->title }}"
-                                class="w-100 mimg">
+                                class="w-100 mimg"  style="width: 351px; height: 316px; object-fit: cover; border-radius: 8px;">
                             <div class="content">
                                 <span>Galeri Peternakan</span>
                                 <a href="#" class="title">{{ $gallery->title }}</a>

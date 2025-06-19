@@ -56,15 +56,15 @@
                         </a>
                     @endif
 
-                    <div class="d-grid gap-lg-4 gap-3">
+                    <!-- <div class="d-grid gap-lg-4 gap-3"> -->
                         @if ($fifth)
-                            <a href="{{ asset('image_gallery/' . $fifth->image) }}"
-                                class="gallery-com-thumb thard img-popup w-100 round20">
-                                <img src="{{ asset('image_gallery/' . $fifth->image) }}" alt="img" class="round20">
-                            </a>
+                           <a href="{{ asset('image_gallery/' . $fifth->image) }}"
+                            class="gallery-com-thumb secound img-popup w-100 round20">
+                            <img src="{{ asset('image_gallery/' . $fifth->image) }}" alt="img" class="round20">
+                        </a>
                         @endif
 
-                    </div>
+                    <!-- </div> -->
                 </div>
                 <div class="d-flex justify-content-end mt-4">
                     <a href="{{ url('galeri') }}" class="btn btn-primary"

@@ -14,9 +14,9 @@
 
 
     <section class="product-list-section overflow-hidden section-padding white-bg">
-        <div class="container">
-            <div class="row g-xl-4 g-3 justify-content-center">
-                <div class="col-lg-9">
+            <div class="container">
+                <div class="row g-xl-4 g-3 justify-content-center">
+                    <div class="col-lg-12">
                     <div class="filter-mixtup">
                         <div class="mixtup-filtering d-flex justify-content-center mb-60">
                             <div class="filter-btns">
@@ -51,26 +51,36 @@
                                     }
                                 @endphp
 
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 mix {{ $category }}"
-                                    data-order="{{ $loop->iteration }}">
-                                    <div class="feature-itemsv1 h-100 border rounded shadow-sm">
+                                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 mix {{ $category }}" data-order="{{ $loop->iteration }}">
+                                    <div class="h-100 border rounded shadow-sm d-flex flex-column">
                                         <img src="{{ asset('image_animal/' . $animal->image) }}" alt="{{ $animal->name }}"
-                                            class="f-thumb w-100" style="height: 200px; object-fit: cover;">
-                                        <div class="content p-3 d-flex flex-column justify-content-between h-100">
+                                            class="w-100 rounded-top" style="height: 200px; object-fit: cover;">
+                                        
+                                        <div class="p-3 d-flex flex-column justify-content-between flex-grow-1">
                                             <div>
                                                 <a href="{{ url('katalog-detail/' . $animal->id) }}"
-                                                    class="title fw-bold d-block mb-2">{{ $animal->name }}</a>
-                                                <p class="mb-2">{{ Str::limit($animal->description, 60) }}</p>
+                                                class="fw-bold text-dark d-block mb-2" style="font-size: 1.1rem;">
+                                                    {{ $animal->name }}
+                                                </a>
+                                                <p class="text-muted mb-2" style="font-size: 0.9rem;">
+                                                    {{ Str::limit($animal->description, 60) }}
+                                                </p>
                                             </div>
-                                            <div>
-                                                <h5 class="text-success mb-2">
-                                                    Rp{{ number_format($animal->price, 0, ',', '.') }}</h5>
+                                            
+                                            <div class="mt-auto">
+                                                <h5 class="text-success fw-semibold mb-2">
+                                                    Rp{{ number_format($animal->price, 0, ',', '.') }}
+                                                </h5>
                                                 <a href="{{ url('katalog-detail/' . $animal->id) }}"
-                                                    class="btn btn-outline-success btn-sm w-100">Lihat Detail</a>
+                                                class="btn btn-outline-success btn-sm w-100">
+                                                    Lihat Detail
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+
                             @endforeach
                         </div>
 
@@ -131,5 +141,4 @@
 
         </div>
     </section>
-
 @endsection
